@@ -18,7 +18,8 @@ if (isset($_POST['submit'])) {
     $LastName = $_POST['lname'];
     $Email = $_POST['email'];
     $Country = "Nepal";
-    require("/xampp/htdocs/php/FirstTry/fpdf/fpdf.php"); // includeing the file 
+    require '../fpdf/fpdf.php';
+    // require("/xampp/htdocs/php/FirstTry/fpdf/fpdf.php"); // includeing the file 
     if ($FirstName == null || strlen($FirstName) < 5) {
         header('location:http://'.$_SERVER['HTTP_HOST']. '/php/FirstTry/index.php');
 
@@ -105,3 +106,4 @@ if (isset($_POST['submit'])) {
         }
     }
 }
+?>
